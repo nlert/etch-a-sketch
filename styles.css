@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
 }
 
 body {
@@ -9,8 +13,49 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #bdd4e7;
-    background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+    gap: 10px;
+    background-color: #2b4162;
+    background-image: linear-gradient(-45deg, #1c2a3f 0%, #12100e 74%);
+}
+
+.sidebar {
+    border: 1px solid #9e9e9e33;
+    height: 275px;
+    width: 350px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.spacer {
+    height: 225px;
+}
+
+h2 {
+    color: white;
+}
+
+button {
+    background-color: #9e9e9e33;
+    color: white;
+    border-radius: 5px;
+    border: 0;
+    width: 100%;
+    padding: 2px;
+}
+
+.color-picker, .size-picker {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    gap: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.96);
 }
 
 .container {
@@ -18,10 +63,15 @@ body {
     flex-wrap: wrap;
     width: 500px;
     aspect-ratio: 1;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .gridItem {
-    background-color: white;
-    border: 1px solid black;
+    background-color: #9e9e9e33;
     aspect-ratio: 1;
+}
+
+#reset {
+    width: 50px;
 }
