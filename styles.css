@@ -5,6 +5,7 @@
 }
 
 body {
+    height: 100svh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,6 +16,12 @@ body {
 .container {
     display: flex;
     flex-wrap: wrap;
-    width: 800px;
+    width: 500px;
+    aspect-ratio: 1;
+}
+
+.gridItem {
+    background-color: white;
+    border: 1px solid black;
     aspect-ratio: 1;
 }
