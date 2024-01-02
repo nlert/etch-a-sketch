@@ -20,36 +20,37 @@ large.addEventListener("click", () => {
     createCanvas(64);
 });
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     createCanvas();
-// });
+let color = "#ff4d4c";
+
+red.addEventListener("click", () => {
+    color = "#ff4d4c";
+});
+
+green.addEventListener("click", () => {
+    color = "#73ca83";
+});
+
+blue.addEventListener("click", () => {
+    color = "#52aeff";
+});
 
 function createCanvas(canvasSize) {
-    let color = "#ff4d4c";
+
+    container.innerHTML = "";
+
     for (i = 0; i < canvasSize * canvasSize; i++) {
         const newDiv = document.createElement("div");
         newDiv.classList.add("gridItem");
-        newDiv.style.width = container.clientWidth / 16 + "px";
+        newDiv.style.width = container.clientWidth / canvasSize + "px";
         container.appendChild(newDiv);
 
         reset.addEventListener("click", () => {
             newDiv.style.backgroundColor = "#9e9e9e33";
         });
 
-        red.addEventListener("click", () => {
-            color = "#ff4d4c";
-        });
-
-        green.addEventListener("click", () => {
-            color = "#73ca83";
-        });
-
-        blue.addEventListener("click", () => {
-            color = "#52aeff";
-        });
-
-        newDiv.addEventListener("mouseenter", () => {
-            newDiv.style.backgroundColor = color;
-        });
+        console.log(i);
     }
+    let divs = container.querySelectorAll('div');
+
+    divs.forEach(divs => divs.addEventListener('mouseover', divs.style.backgroundColor = color))
 }
